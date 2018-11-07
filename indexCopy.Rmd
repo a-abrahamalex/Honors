@@ -2,10 +2,13 @@
 title: "FizzBuzz"
 ---
 
+In a list consisting of elements from 1 to 100, numbers divisible by three were converted to Fizz, numbers divisible by five were converted to Buzz, and numbers divisible by both three and five were converted to FizzBuzz.
+
 ```{r}
 listOfNumbers = c(1:100)
 
 # These variables are the indexes of numbers that are divisible by three, five, and three and five
+# If the remainder of the division is equal to zero, then the element in the list is divisible
 divisibleByThree = which(listOfNumbers %% 3 == 0)
 divisibleByFive = which(listOfNumbers %% 5 == 0)
 divisibleByThreeAndFive = intersect(which(listOfNumbers %% 3 == 0), which(listOfNumbers %% 5 == 0))

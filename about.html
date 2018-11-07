@@ -206,8 +206,16 @@ $(document).ready(function () {
 </div>
 
 
-<pre class="r"><code>coordinate = matrix(c(1:5, 10:6, 11:15, 20:16, 21:25),
+<p>In the chutes and ladders game, a pawn is moved from the starting position of 1 to a finishing position of 25. A virtual dice is rolled to determine the number of positions that the pawn can move forward. If the pawn encounters the bottom of a ladder, the pawn climbs to the top of the ladder. If the pawn encounters the top of a chute, it slides down to the bottom of the chute. The positioning of the chutes and ladders on the board are shown in the picture below.</p>
+<p>In the bounce back version of chutes and ladders, if the pawn overshoots past position 25, it bounces back to a lower position. For instance, if a pawn is at position 23 and the dice rolls a 6, the pawn moves forward 2 positions to position 25 and then bounces back 4 positions to 21.</p>
+<div class="figure">
+<img src="Picture.png" />
+
+</div>
+<pre class="r"><code># set up a coordinate system to identify the location of the pawn (numbers 1 to 25)
+coordinate = matrix(c(1:5, 10:6, 11:15, 20:16, 21:25),
                     nrow = 5, ncol = 5, byrow = T)
+# position is a matrix variable that consists of either 0 or 1; a 1 indicates the present position of the pawn
 position = matrix(c(0), nrow = 5, ncol = 5, byrow = T)
 dice = c() #runif(1, 0, 7)
 numberOfSimulations = 1000
@@ -257,7 +265,7 @@ for(i in 1:numberOfSimulations) {
 barplot(table(xValues)/numberOfSimulations, xlab = &quot;Number of Dice Rolls&quot;, ylab = &quot;Frequency&quot;, ylim = c(0,max(table(xValues)/numberOfSimulations)), main = &quot;Frequency of Dice Rolls&quot;)</code></pre>
 <p><img src="about_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 <pre class="r"><code>print(paste(&quot;The average number of dice rolls for&quot;, numberOfSimulations, &quot;simulations is&quot;, round(mean(xValues)), &quot;.&quot;))</code></pre>
-<pre><code>## [1] &quot;The average number of dice rolls for 1000 simulations is 16 .&quot;</code></pre>
+<pre><code>## [1] &quot;The average number of dice rolls for 1000 simulations is 17 .&quot;</code></pre>
 
 
 
