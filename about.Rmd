@@ -6,6 +6,9 @@ In the chutes and ladders game, a pawn is moved from the starting position of 1 
 
 In the bounce back version of chutes and ladders, if the pawn overshoots past position 25, it bounces back to a lower position. For instance, if a pawn is at position 23 and the dice rolls a 6, the pawn moves forward 2 positions to position 25 and then bounces back 4 positions to 21.
 
+It was determined that the average number of dice rolls for 1000 simulations is 17.
+
+
 ![](Picture.png)
 
 ```{r}
