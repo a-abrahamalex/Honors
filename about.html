@@ -186,6 +186,9 @@ $(document).ready(function () {
 <li>
   <a href="about.html">Chutes and Ladders</a>
 </li>
+<li>
+  <a href="index copy.html">FizzBuzz</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -252,7 +255,7 @@ for(i in 1:numberOfSimulations) {
   }
 
 barplot(table(xValues)/numberOfSimulations, xlab = &quot;Number of Dice Rolls&quot;, ylab = &quot;Frequency&quot;, ylim = c(0,max(table(xValues)/numberOfSimulations)), main = &quot;Frequency of Dice Rolls&quot;)</code></pre>
-<p><img src="about_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p><img src="about_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 <pre class="r"><code>print(paste(&quot;The average number of dice rolls for&quot;, numberOfSimulations, &quot;simulations is&quot;, round(mean(xValues)), &quot;.&quot;))</code></pre>
 <pre><code>## [1] &quot;The average number of dice rolls for 1000 simulations is 17 .&quot;</code></pre>
 

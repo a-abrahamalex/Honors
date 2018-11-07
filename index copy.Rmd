@@ -1,0 +1,20 @@
+---
+title: "FizzBuzz"
+---
+
+```{r}
+listOfNumbers = c(1:100)
+
+# These variables are the indexes of numbers that are divisible by three, five, and three and five
+divisibleByThree = which(listOfNumbers %% 3 == 0)
+divisibleByFive = which(listOfNumbers %% 5 == 0)
+divisibleByThreeAndFive = intersect(which(listOfNumbers %% 3 == 0), which(listOfNumbers %% 5 == 0))
+
+# Converts the listOfNumbers into Fizz, Buzz, or FizzBuzz
+listOfNumbers[divisibleByThree] = "Fizz"
+listOfNumbers[divisibleByFive] = "Buzz"
+listOfNumbers[divisibleByThreeAndFive] = "FizzBuzz"
+
+print(listOfNumbers)
+```
+

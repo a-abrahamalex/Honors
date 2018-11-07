@@ -11,7 +11,7 @@
 
 
 
-<title>My Website</title>
+<title>FizzBuzz</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -201,13 +201,41 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">My Website</h1>
+<h1 class="title toc-ignore">FizzBuzz</h1>
 
 </div>
 
 
-<p>Hello professor Crump! Welcome to my website!</p>
-<p>The Chutes and Ladders and FizzBuzz problem are located in the respective tabs.</p>
+<pre class="r"><code>listOfNumbers = c(1:100)
+
+# These variables are the indexes of numbers that are divisible by three, five, and three and five
+divisibleByThree = which(listOfNumbers %% 3 == 0)
+divisibleByFive = which(listOfNumbers %% 5 == 0)
+divisibleByThreeAndFive = intersect(which(listOfNumbers %% 3 == 0), which(listOfNumbers %% 5 == 0))
+
+# Converts the listOfNumbers into Fizz, Buzz, or FizzBuzz
+listOfNumbers[divisibleByThree] = &quot;Fizz&quot;
+listOfNumbers[divisibleByFive] = &quot;Buzz&quot;
+listOfNumbers[divisibleByThreeAndFive] = &quot;FizzBuzz&quot;
+
+print(listOfNumbers)</code></pre>
+<pre><code>##   [1] &quot;1&quot;        &quot;2&quot;        &quot;Fizz&quot;     &quot;4&quot;        &quot;Buzz&quot;     &quot;Fizz&quot;    
+##   [7] &quot;7&quot;        &quot;8&quot;        &quot;Fizz&quot;     &quot;Buzz&quot;     &quot;11&quot;       &quot;Fizz&quot;    
+##  [13] &quot;13&quot;       &quot;14&quot;       &quot;FizzBuzz&quot; &quot;16&quot;       &quot;17&quot;       &quot;Fizz&quot;    
+##  [19] &quot;19&quot;       &quot;Buzz&quot;     &quot;Fizz&quot;     &quot;22&quot;       &quot;23&quot;       &quot;Fizz&quot;    
+##  [25] &quot;Buzz&quot;     &quot;26&quot;       &quot;Fizz&quot;     &quot;28&quot;       &quot;29&quot;       &quot;FizzBuzz&quot;
+##  [31] &quot;31&quot;       &quot;32&quot;       &quot;Fizz&quot;     &quot;34&quot;       &quot;Buzz&quot;     &quot;Fizz&quot;    
+##  [37] &quot;37&quot;       &quot;38&quot;       &quot;Fizz&quot;     &quot;Buzz&quot;     &quot;41&quot;       &quot;Fizz&quot;    
+##  [43] &quot;43&quot;       &quot;44&quot;       &quot;FizzBuzz&quot; &quot;46&quot;       &quot;47&quot;       &quot;Fizz&quot;    
+##  [49] &quot;49&quot;       &quot;Buzz&quot;     &quot;Fizz&quot;     &quot;52&quot;       &quot;53&quot;       &quot;Fizz&quot;    
+##  [55] &quot;Buzz&quot;     &quot;56&quot;       &quot;Fizz&quot;     &quot;58&quot;       &quot;59&quot;       &quot;FizzBuzz&quot;
+##  [61] &quot;61&quot;       &quot;62&quot;       &quot;Fizz&quot;     &quot;64&quot;       &quot;Buzz&quot;     &quot;Fizz&quot;    
+##  [67] &quot;67&quot;       &quot;68&quot;       &quot;Fizz&quot;     &quot;Buzz&quot;     &quot;71&quot;       &quot;Fizz&quot;    
+##  [73] &quot;73&quot;       &quot;74&quot;       &quot;FizzBuzz&quot; &quot;76&quot;       &quot;77&quot;       &quot;Fizz&quot;    
+##  [79] &quot;79&quot;       &quot;Buzz&quot;     &quot;Fizz&quot;     &quot;82&quot;       &quot;83&quot;       &quot;Fizz&quot;    
+##  [85] &quot;Buzz&quot;     &quot;86&quot;       &quot;Fizz&quot;     &quot;88&quot;       &quot;89&quot;       &quot;FizzBuzz&quot;
+##  [91] &quot;91&quot;       &quot;92&quot;       &quot;Fizz&quot;     &quot;94&quot;       &quot;Buzz&quot;     &quot;Fizz&quot;    
+##  [97] &quot;97&quot;       &quot;98&quot;       &quot;Fizz&quot;     &quot;Buzz&quot;</code></pre>
 
 
 

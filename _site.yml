@@ -7,3 +7,5 @@ navbar:
       href: index.html
     - text: "Chutes and Ladders"
       href: about.html
+    - text: "FizzBuzz"
+      href: index copy.html
