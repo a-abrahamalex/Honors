@@ -2,6 +2,6 @@
 title: "My Website"
 ---
 
-Hello professor Crump!
+Hello professor Crump! Welcome to my website!
 
-The chutes and ladders and FizzBuzz problem are located on the "About Me" tab.
+The Chutes and Ladders and FizzBuzz problem are located in the respective tabs.
