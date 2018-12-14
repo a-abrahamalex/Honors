@@ -5,3 +5,4 @@ title: "My Website"
 Hello professor Crump! Welcome to my website!
 
 The Chutes and Ladders and FizzBuzz problem are located in the respective tabs.
+The paper summary and statistical analysis are located in the respective tabs.
